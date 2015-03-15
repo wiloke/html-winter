@@ -1,0 +1,67 @@
+/*------------------------------------------------------------------------
+# Oniver
+# ------------------------------------------------------------------------
+# Designed by 
+# Websites:  http://www. -  Email: 
+--------------------------------------------------------------------------
+
+    1.   Shortcode
+    2.   Header
+    3.   Home
+    4.   Short About
+    5.   Our story
+    6.   The menu
+    7.   Highlight
+    8.   The staff
+    9.   Events
+    10.  Testimonial
+    11.  Section blog
+    12.  Contact
+    13.  Footer
+    14.  Fastfood
+    15.  Milestones
+    16.  About story
+    17.  Shop
+    18.  Product detail
+    19.  Reservation
+    20.  Cart
+    21.  Checkout
+    22.  Preloader
+    23.  Responsive
+
+--------------------------------------------------------------------------------*/
+
+
+$color: #e15d5d !default;
+$pd: 'Playfair Display', serif !default;
+$ms: 'Montserrat', sans-serif !default;
+$qs: 'Raleway', sans-serif !default;
+$la: 'Lato', sans-serif !default;
+
+@import "mixins";
+
+/* 1.   Shortcode
+--------------------------------------------------------------------------------*/
+@import "1.shortcode";
+
+/* 2.   Header
+--------------------------------------------------------------------------------*/
+@import "2.header";
+
+/* 3.   Hero
+--------------------------------------------------------------------------------*/
+@import "3.hero";
+
+/* 16.   Preloader
+--------------------------------------------------------------------------------*/
+@import "16.preloader";
+
+/* 17.   Blog
+--------------------------------------------------------------------------------*/
+@import "17.blog";
+
+
+/* 18.   404
+--------------------------------------------------------------------------------*/
+@import "18.404";
+

@@ -1,0 +1,364 @@
+a,
+input,
+textarea,
+button,
+select {
+    outline: none;
+}
+a:hover,
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus {
+    text-decoration: none;
+}
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+    outline: none !important;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    font-family: $la;
+    font-size: 14px;
+    color: #888888;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.014em;
+}
+
+input, textarea {
+    @include rounded(0);
+}
+input[type="search"],
+input[type="text"],
+input[type="url"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="file"] {
+    background: none;
+    border: 0;
+    background-color: #f7f8f8;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 15px;
+    color: #888888;
+    font-family: $la;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+textarea {
+    background: none;
+    border: 0;
+    background-color: #f7f8f8;
+    resize: none;
+    padding: 15px;
+    height: 100px;
+    color: #888888;
+    font-family: $la;
+    font-size: 14px;
+    vertical-align: middle;
+}
+input::-webkit-input-placeholder {
+    color: #888888;
+}
+input:-moz-placeholder {
+    color: #888888;
+}
+input::-moz-placeholder {
+    color: #888888;
+}
+input:-ms-input-placeholder {
+    color: #888888;
+}
+textarea::-webkit-input-placeholder {
+    color: #888888;
+}
+textarea:-moz-placeholder {
+    color: #888888;
+}
+textarea::-moz-placeholder {
+    color: #888888;
+}
+textarea:-ms-input-placeholder {
+  color: #888888;
+}
+
+
+a {
+    color: $color;
+    @include transition(all .3s ease);
+    letter-spacing: 0.02em;
+    &:hover {
+        color: #000;
+    }
+}
+code, kbd, pre, samp {
+    font-family: $qs;
+    font-size: inherit;
+    @include rounded(0);
+    letter-spacing: 0.015em;
+}
+code {
+    background-color: #eee;
+    letter-spacing: 0.015em;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+}
+
+p {
+    line-height: 1.8em;
+    letter-spacing: 0.02em;
+}
+ol li, ul li {
+    letter-spacing: 0.02em;
+}
+::-moz-selection {
+    color: #fff;
+    background-color: $color;
+}
+::selection {
+    color: #fff;
+    background-color: $color;
+}
+#page-wrap {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 9;
+    @include transition(all .3s ease);
+}
+
+.container {
+    position: relative;
+}
+
+.tb {
+    display: table;
+    width: 100%;
+}
+.tb-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.h1, h1 {
+    font-family: $ms;
+    font-weight: 700;
+    font-size: 40px;
+    color: #484848;
+    line-height: 1.4em;
+    letter-spacing: 0.01em;
+    a {
+        color: inherit;
+    }
+}
+.h2, h2 {
+    font-family: $ms;
+    font-weight: 700;
+    font-size: 30px;
+    color: #484848;
+    line-height: 1.4em;
+    letter-spacing: 0.02em;
+    a {
+        color: inherit;
+    }
+}
+.h3, h3 {
+    font-family: $ms;
+    font-weight: 700;
+    font-size: 22px;
+    color: #484848;
+    line-height: 1.5em;
+    letter-spacing: 0.01em;
+    a {
+        color: inherit;
+    }
+}
+.h4, h4 {
+    font-family: $ms;
+    font-weight: 700;
+    font-size: 16px;
+    color: #484848;
+    line-height: 1.5em;
+    letter-spacing: 0.01em;
+    a {
+        color: inherit;
+    }
+}
+.h5, h5 {
+    font-family: $ms;
+    font-weight: 700;
+    font-size: 14px;
+    color: #484848;
+    line-height: 1.5em;
+    letter-spacing: 0.01em;
+    a {
+        color: inherit;
+    }
+}
+.h6, h6 {
+    font-family: $ms;
+    font-weight: 700;
+    font-size: 12px;
+    color: #484848;
+    line-height: 1.5em;
+    letter-spacing: 0.01em;
+    a {
+        color: inherit;
+    }
+}
+
+.pi-btn {
+    display: inline-block;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    font-family: $ms;
+    font-size: 10px;
+    font-weight: 400;
+    color: #535353;
+    border: 1px solid #535353;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 13px 22px;
+    &:hover {
+        border-color: $color;
+        color: $color;
+    }
+}
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+
+blockquote, .blockquote {
+    border: 0;
+    font-size: 14px;
+    font-style: italic;
+    padding-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-left: 3px solid $color;
+    cite {
+        display: inline-block;
+        font-family: $ms;
+        font-size: 10px;
+        font-style: normal;
+        margin-top: 5px;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+}
+
+abbr {
+    color: #A1D71A;
+    border-width: 2px;
+}
+mark, .mark {
+    background-color: $color;
+}
+
+.icon {
+    display: inline-block;
+    font-style: normal;
+}
+.autoHeight {
+    @include transition;
+}
+.owl-carousel {
+    .owl-controls {
+        margin-top: 0;
+        .owl-buttons {
+            margin-top: 0;
+            position: absolute;
+            width: 100%;
+            left: 0; bottom: -30px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+            @include transition(all .3s ease .3s);
+            > div {
+                display: inline-block;
+                font-size: 14px;
+                color: #aaa;
+                overflow: hidden;
+                margin: 3px;
+                .fa {
+                    position: relative;
+                    height: 25px; width: 25px;
+                    text-align: center;
+                    line-height: 24px;
+                    border: 1px solid #aaa;
+                    @include transition(all .3s ease);
+                }
+                &:hover {
+                    .fa {
+                        border-color: $color;
+                        color: $color;
+                    }
+                }
+            }
+        }
+        .owl-pagination {
+            margin-top: 30px;
+            .owl-page {
+                position: relative;
+                > span {
+                    opacity: 1;
+                    width: 9px; height: 9px;
+                    @include rounded(50%);
+                    border: 1px solid #1b1b1b;
+                    margin: 3px;
+                    background: none;
+                    @include transition(all .3s linear);
+                }
+                &.active {
+                    > span {
+                        border-color: $color;
+                        background-color: $color;
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .owl-controls {
+            .owl-buttons {
+                bottom: -50px;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
