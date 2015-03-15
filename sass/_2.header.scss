@@ -217,6 +217,9 @@
 		            margin-bottom: 5px;
 		            a {
 		                color: inherit;
+		                text-overflow: ellipsis;
+		                overflow: hidden;
+		                white-space: nowrap;
 		                &:hover {
 		                    color: $color;
 		                }
@@ -334,7 +337,7 @@
 				}
 			}
 			&.back-mb {
-				background-color: #f3f3f3;
+				background-color: #eff1f1;
 			}
 		}
 		&.off-canvas-active {
@@ -346,8 +349,7 @@
 			width: 42px; height: 42px;
 			text-align: center;
 			cursor: pointer;
-			border-left: 1px solid #eee;
-			background-color: #f3f3f3;
+			background-color: #eff1f1;
 			color: #383838;
 			@include translateY(-43px);
 			.fa {

@@ -354,6 +354,9 @@ body.single-post {
             margin-bottom: 5px;
             a {
                 color: inherit;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
                 &:hover {
                     color: $color;
                 }
