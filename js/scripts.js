@@ -91,6 +91,10 @@
     // READY FUNCTION
     $(document).ready(function() {
 
+        if (isMobile.any()) {
+            $('html').addClass('.ismobile');
+        }
+
         if ($(".featured-slider").length > 0) {
             $(".featured-slider").owlCarousel({
                 autoPlay: 20000,
@@ -141,8 +145,6 @@
             piPlaceholder();
         });
 
-
-        var menuType = $('.pi-navigation').data('menu-responsive');
 
         $(window).on('load resize', function() {
             /* Page style */
@@ -200,13 +202,17 @@
 
             /* Menu style */
             var menu = $('.pi-navigation'),
-                toggleMenu = $('.toggle-menu'),
+                openMenu = $('.open-menu'),
+                closeMenu = $('.close-menu'),
                 menuList = menu.find('.navlist'),
                 subMenu = menu.find('.sub-menu'),
-                windowWidth = window.innerWidth;
-                windowHeight = $(window).height();
-            if (window.innerWidth < menuType) {
-                toggleMenu.show();
+                header = $('#header'),
+                windowWidth = window.innerWidth,
+                windowHeight = $(window).height(),
+                menuType = menu.data('menu-responsive');
+            if (windowWidth < menuType) {
+                openMenu.show();
+                header.addClass('header-responsive');
                 menuList
                     .addClass('off-canvas')
                     .css('height', windowHeight);
@@ -245,41 +251,60 @@
                             .removeClass('sub-menu-active');
                     });
                 });
-                toggleMenu.click(function() {
-                    menuList.toggleClass('off-canvas-active');
-                    $(this).toggleClass('toggle-active');
-                    $('.sub-menu').removeClass('sub-menu-active');
+                openMenu.on('click', function() {
+                    menuList.addClass('off-canvas-active');
+                    $(this).addClass('toggle-active');
+                    closeMenu.show();
                 });
-                $('html').click(function() {
+                closeMenu.on('click', function() {
                     menuList.removeClass('off-canvas-active');
-                    toggleMenu.removeClass('toggle-active');
+                    openMenu.removeClass('toggle-active');
                     $('.sub-menu').removeClass('sub-menu-active');
+                    $(this).hide();
                 });
-                menu.click(function(evt) {
+                $('html').on('click', function() {
+                    menuList.removeClass('off-canvas-active');
+                    openMenu.removeClass('toggle-active');
+                    $('.sub-menu').removeClass('sub-menu-active');
+                    closeMenu.hide();
+                });
+                menu.on('click', function(evt) {
                     evt.stopPropagation();
                 });
 
             } else {
-                toggleMenu.hide();
+                openMenu.hide();
+                header.removeClass('header-responsive');
                 menuList
                     .removeClass('off-canvas')
                     .css('height', 'auto');
+                $('.back-mb, .submenu-toggle').remove();
             }
         });
 
 
         
-
+        function navFixed() {
+            var menu = $('.pi-navigation'),
+                calScroll = $('#header').offset().top + $('#header').outerHeight() - 52,
+                windowScroll = $(window).scrollTop();
+            if (windowScroll >= calScroll) {
+                menu.addClass('nav-fixed');
+            } else {
+                menu.removeClass('nav-fixed');
+            }
+        }
 
 
         $('.pi-line').height($(window).height()/2);
         $(window).scroll(function() {
             timeLine();
+            navFixed();
         });
         
 
         if (isMobile.any() || window.innerWidth < 1200) {
-            $('.post-body').css('text-align', 'justify');
+            $('.blog-content .post-entry').css('text-align', 'justify');
         }
 
     });

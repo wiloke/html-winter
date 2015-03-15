@@ -5,7 +5,7 @@
     -ms-user-select: none;
 	.logo {
 		padding: 80px 20px;
-		margin-top: 52px;
+		margin-bottom: 52px;
 		a {
 			display: inline-block;
 		}
@@ -13,15 +13,33 @@
 			max-height: 90px;
 		}
 	}
+	&.header-responsive {
+		.logo {
+			margin-bottom: 0;
+			margin-top: 52px;
+		}
+		.pi-navigation {
+			position: fixed;
+			top: 0;
+			bottom: auto;
+			border-top: 0;
+		}
+	}
 }
 .pi-navigation {
-	position: fixed;
-	top: 0; left: 0;
+	position: absolute;
+	bottom: 0; left: 0;
 	width: 100%;
+	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	background-color: #fff;
 	z-index: 9999;
 	height: 52px;
+	@include translateZ(0);
+	&.nav-fixed {
+		position: fixed;
+		top: 0; bottom: auto;
+	}
 	.container {
 		height: 100%;
 	}
@@ -118,7 +136,7 @@
 			width: 190px;
 			padding: 0;
 			list-style: none;
-			left: -5px; top: 100%;
+			left: -5px; top: 97%;
 			border: 1px solid #f3f3f3;
 			opacity: 0;
 			visibility: hidden;
@@ -219,6 +237,7 @@
 			cursor: pointer;
 			border-left: 1px solid #eee;
 			background-color: #f3f3f3;
+			color: #383838;
 			.fa {
 				font-size: 14px;
 				line-height: 42px;
@@ -230,19 +249,19 @@
 	}
 }
 
-.toggle-menu {
+.open-menu {
 	position: absolute;
 	width: 50px; height: 14px;
 	cursor: pointer;
 	margin: auto;
 	top: 0; left: 0; bottom: 0;
-	z-index: 999999;
+	z-index: 999;
 	.item {
 		position: absolute;
 		display: block;
 		font-size: 0;
 		width: 20px; height: 2px;
-		background-color: #535353;
+		background-color: #383838;
 		margin: auto;
 		left: 0; right: 0;
 		overflow: hidden;
@@ -265,4 +284,12 @@
 	}
 }
 
-
+.close-menu {
+	position: absolute;
+	width: 50px; height: 14px;
+	cursor: pointer;
+	margin: auto;
+	top: 0; left: 0; bottom: 0;
+	z-index: 99999;
+	display: none;
+}

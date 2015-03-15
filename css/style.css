@@ -463,7 +463,7 @@ mark, .mark {
 }
 .header .logo {
   padding: 80px 20px;
-  margin-top: 52px;
+  margin-bottom: 52px;
 }
 .header .logo a {
   display: inline-block;
@@ -471,16 +471,37 @@ mark, .mark {
 .header .logo img {
   max-height: 90px;
 }
-
-.pi-navigation {
+.header.header-responsive .logo {
+  margin-bottom: 0;
+  margin-top: 52px;
+}
+.header.header-responsive .pi-navigation {
   position: fixed;
   top: 0;
+  bottom: auto;
+  border-top: 0;
+}
+
+.pi-navigation {
+  position: absolute;
+  bottom: 0;
   left: 0;
   width: 100%;
+  border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   background-color: #fff;
   z-index: 9999;
   height: 52px;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.pi-navigation.nav-fixed {
+  position: fixed;
+  top: 0;
+  bottom: auto;
 }
 .pi-navigation .container {
   height: 100%;
@@ -605,7 +626,7 @@ mark, .mark {
   padding: 0;
   list-style: none;
   left: -5px;
-  top: 100%;
+  top: 97%;
   border: 1px solid #f3f3f3;
   opacity: 0;
   visibility: hidden;
@@ -722,6 +743,7 @@ mark, .mark {
   cursor: pointer;
   border-left: 1px solid #eee;
   background-color: #f3f3f3;
+  color: #383838;
 }
 .navlist.off-canvas .submenu-toggle .fa {
   font-size: 14px;
@@ -731,7 +753,7 @@ mark, .mark {
   background-color: #f3f3f3;
 }
 
-.toggle-menu {
+.open-menu {
   position: absolute;
   width: 50px;
   height: 14px;
@@ -740,15 +762,15 @@ mark, .mark {
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 999999;
+  z-index: 999;
 }
-.toggle-menu .item {
+.open-menu .item {
   position: absolute;
   display: block;
   font-size: 0;
   width: 20px;
   height: 2px;
-  background-color: #535353;
+  background-color: #383838;
   margin: auto;
   left: 0;
   right: 0;
@@ -760,18 +782,31 @@ mark, .mark {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.toggle-menu .item-1 {
+.open-menu .item-1 {
   top: 0;
 }
-.toggle-menu .item-2 {
+.open-menu .item-2 {
   top: 0;
   bottom: 0;
 }
-.toggle-menu .item-3 {
+.open-menu .item-3 {
   bottom: 0;
 }
-.toggle-menu.toggle-active .item {
+.open-menu.toggle-active .item {
   background-color: #e15d5d;
+}
+
+.close-menu {
+  position: absolute;
+  width: 50px;
+  height: 14px;
+  cursor: pointer;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+  display: none;
 }
 
 /* 3.   Hero
@@ -1757,11 +1792,11 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
 }
 
 .blog-standard .content {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .blog-grid .content {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 .blog-grid .post-wrapper {
   margin-left: -15px;
@@ -1797,7 +1832,7 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
 
 .blog-timeline .content,
 .blog-list .content {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 .blog-timeline .post,
 .blog-list .post {
@@ -1957,7 +1992,7 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
 }
 
 .sidebar {
-  margin-top: 100px;
+  margin-top: 80px;
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
