@@ -2667,6 +2667,19 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
     padding-right: 10px;
   }
 
+  .open-menu,
+  .close-menu {
+    left: -5px;
+  }
+
+  .pi-navigation .search-box {
+    right: -18px;
+  }
+
+  .pi-navigation .share-box {
+    right: 55px;
+  }
+
   .header .logo {
     padding: 40px 30px;
   }
