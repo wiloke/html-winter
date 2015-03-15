@@ -231,7 +231,7 @@
                         }
                     }
                     &.share-active {
-                        @include translateX(0);
+                        @include translateX(5px);
                         opacity: 1;
                         visibility: visible;
                     }
@@ -1315,6 +1315,9 @@ body.single-post {
     .pagination,
     .related-post {
         padding: 40px 15px;
+    }
+    .blog-content .post .post-body .post-share {
+        right: 15px;
     }
 }
 

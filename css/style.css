@@ -1498,11 +1498,11 @@ mark, .mark {
   color: #e15d5d;
 }
 .blog-content .post .post-body .post-share .share.share-active {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
+  -webkit-transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  -o-transform: translateX(5px);
+  transform: translateX(5px);
   opacity: 1;
   visibility: visible;
 }
@@ -2659,6 +2659,10 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   .pagination,
   .related-post {
     padding: 40px 15px;
+  }
+
+  .blog-content .post .post-body .post-share {
+    right: 15px;
   }
 }
 @media screen and (max-width: 640px) {
