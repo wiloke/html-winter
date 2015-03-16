@@ -2627,6 +2627,42 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   color: #fff;
 }
 
+.widget_newsletter .desc {
+  margin-top: 20px;
+}
+.widget_newsletter form {
+  position: relative;
+  margin-top: 15px;
+}
+.widget_newsletter .form-item input {
+  width: 100%;
+  padding-right: 77px;
+}
+.widget_newsletter .form-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.widget_newsletter .form-actions input {
+  background-color: #eff1f1;
+  border: 0;
+  height: 42px;
+  line-height: 42px;
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #555;
+  padding: 0 15px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.widget_newsletter .form-actions input:hover {
+  color: #e15d5d;
+}
+
 .contact-info {
   position: relative;
   overflow: hidden;

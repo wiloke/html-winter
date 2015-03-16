@@ -1099,6 +1099,40 @@ body.single-post {
     }
 }
 
+.widget_newsletter {
+    .desc {
+        margin-top: 20px;
+    }
+    form {
+        position: relative;
+        margin-top: 15px;
+    }
+    .form-item {
+        input {
+            width: 100%;
+            padding-right: 77px;
+        }
+    }
+    .form-actions {
+        position: absolute;
+        top: 0; right: 0;
+        input {
+            background-color: #eff1f1;
+            border: 0;
+            height: 42px;
+            line-height: 42px;
+            font-size: 11px;
+            font-family: $ms;
+            text-transform: uppercase;
+            color: #555;
+            padding: 0 15px;
+            @include transition;
+            &:hover {
+                color: $color;
+            }
+        }
+    }
+}
 
 
 .contact-info {
