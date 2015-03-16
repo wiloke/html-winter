@@ -63,7 +63,7 @@ body {
   position: relative;
   font-family: "Lato", sans-serif;
   font-size: 14px;
-  color: #888888;
+  color: #7b7b7b;
   background-color: #fff;
   background-repeat: no-repeat;
   padding: 0;
@@ -455,6 +455,84 @@ mark, .mark {
 
 /* 2.   Header
 --------------------------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  display: table;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999999999;
+}
+
+#preloader .page-loading .item-icon {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  opacity: .9;
+  border-right: 3px solid #e15d5d;
+  border-bottom: 3px solid transparent;
+  border-radius: 100%;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  -o-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  50% {
+    -moz-transform: rotate(180deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+
+  50% {
+    -o-transform: rotate(180deg);
+  }
+
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
 .header {
   position: relative;
   -webkit-user-select: none;
@@ -1466,6 +1544,7 @@ mark, .mark {
   text-transform: uppercase;
   top: 5px;
   left: 5px;
+  z-index: 999;
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
@@ -1621,6 +1700,83 @@ mark, .mark {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
+}
+
+.category-heading {
+  position: relative;
+  padding: 30px 0;
+  background-color: #f3f5f5;
+  border-bottom: 1px solid #eee;
+  z-index: 9;
+}
+.category-heading h1 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 0.03em;
+}
+.category-heading p {
+  margin: 0;
+  letter-spacing: 0.03em;
+  color: #666;
+}
+
+.post-slider .owl-controls .owl-buttons {
+  position: static;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.post-slider .owl-controls .owl-buttons > div {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 9999;
+  opacity: .8;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.post-slider .owl-controls .owl-buttons > div .fa {
+  border: 0;
+  background-color: #fff;
+  color: #333;
+}
+.post-slider .owl-controls .owl-buttons > div.owl-prev {
+  left: 10px;
+}
+.post-slider .owl-controls .owl-buttons > div.owl-next {
+  right: 10px;
+}
+.post-slider .owl-controls .owl-pagination {
+  margin-top: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  z-index: 999;
+}
+.post-slider .owl-controls .owl-pagination .owl-page {
+  position: relative;
+}
+.post-slider .owl-controls .owl-pagination .owl-page > span {
+  border: 0;
+  background-color: #fff;
+}
+.post-slider .owl-controls .owl-pagination .owl-page.active > span {
+  border-color: #e15d5d;
+  background-color: #e15d5d;
+}
+.post-slider:hover .owl-controls .owl-buttons > div {
+  opacity: 1;
 }
 
 body.single-post .blog-content .post .post-body {

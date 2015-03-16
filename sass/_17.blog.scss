@@ -117,6 +117,7 @@
             font-size: 10px;
             text-transform: uppercase;
             top: 5px; left: 5px;
+            z-index: 999;
             @include translateY(-100%);
             @include transition;
             a {
@@ -246,6 +247,87 @@
             }
             .post-cat {
                 @include translateY(0);
+            }
+        }
+    }
+}
+
+.category-heading {
+    position: relative;
+    padding: 30px 0;
+    background-color: #f3f5f5;
+    border-bottom: 1px solid #eee;
+    z-index: 9;
+    h1 {
+        margin: 0;
+        font-size: 30px;
+        letter-spacing: 0.03em;
+    }
+    p {
+        margin: 0;
+        letter-spacing: 0.03em;
+        color: #666;
+    }
+}
+
+.post-slider {
+    .owl-controls {
+        .owl-buttons {
+            position: static;
+            margin: 0;
+            padding: 0;
+            height: 0;
+            opacity: 1;
+            visibility: visible;
+            > div {
+                position: absolute;
+                margin: auto;
+                top: 50%;
+                @include translateY(-50%);
+                z-index: 9999;
+                opacity: .8;
+                @include transition;
+                .fa {
+                    border: 0;
+                    background-color: #fff;
+                    color: #333;
+                }
+                &.owl-prev {
+                    left: 10px;
+                }
+                &.owl-next {
+                    right: 10px;
+                }
+            }
+        }
+        .owl-pagination {
+            margin-top: 0;
+            position: absolute;
+            width: 100%;
+            left: 0; bottom: 10px;
+            z-index: 999;
+            .owl-page {
+                position: relative;
+                > span {
+                    border: 0;
+                    background-color: #fff;
+                }
+                &.active {
+                    > span {
+                        border-color: $color;
+                        background-color: $color;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .owl-controls {
+            .owl-buttons {
+                > div {
+                    opacity: 1;
+                }
             }
         }
     }
