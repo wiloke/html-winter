@@ -370,3 +370,69 @@ mark, .mark {
     }
 }
 
+.ismobile {
+    .owl-carousel {
+        .owl-controls {
+            .owl-buttons {
+                position: static;
+                margin: 0;
+                padding: 0;
+                height: 0;
+                opacity: 1;
+                visibility: visible;
+                > div {
+                    position: absolute;
+                    margin: auto;
+                    top: 50%;
+                    @include translateY(-50%);
+                    z-index: 9999;
+                    opacity: .5;
+                    @include transition;
+                    .fa {
+                        border: 0;
+                        background-color: #fff;
+                        color: #333;
+                        font-size: 12px;
+                    }
+                    &.owl-prev {
+                        left: 5px;
+                    }
+                    &.owl-next {
+                        right: 5px;
+                    }
+                }
+            }
+            .owl-pagination {
+                margin-top: 0;
+                position: absolute;
+                width: 100%;
+                left: 0; bottom: 10px;
+                z-index: 999;
+                .owl-page {
+                    position: relative;
+                    > span {
+                        border: 0;
+                        background-color: #fff;
+                    }
+                    &.active {
+                        > span {
+                            border-color: $color;
+                            background-color: $color;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .owl-controls {
+                .owl-buttons {
+                    > div {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+}

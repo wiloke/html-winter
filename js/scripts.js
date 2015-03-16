@@ -97,7 +97,7 @@
         });
 
         if (isMobile.any()) {
-            $('html').addClass('.ismobile');
+            $('html').addClass('ismobile');
         }
 
         $('.post-share').each(function() {

@@ -82,3 +82,31 @@
 		}
 	}
 }
+.ismobile {
+	.featured-slider {
+		.post {
+			.post-media {
+				&:after {
+					display: none;
+				}
+			}
+			.post-body {
+				padding: 15px 25px;
+				top: auto;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.3);
+				@include translateY(0);
+				opacity: 1;
+				.post-date,
+				.cat {
+					display: none;
+				}
+				.post-title {
+					h4 {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}
