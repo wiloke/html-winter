@@ -2266,6 +2266,10 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   left: -50px;
 }
 
+.page-loadmore {
+  margin-bottom: 60px;
+}
+
 .sidebar {
   margin-top: 80px;
   max-width: 480px;
