@@ -91,7 +91,7 @@
     // READY FUNCTION
     $(document).ready(function() {
         $(window).load(function() {
-            $('#preloader').fadeOut(500);
+            $('#preloader').fadeOut(1000);
             grid();
             piPlaceholder();
         });

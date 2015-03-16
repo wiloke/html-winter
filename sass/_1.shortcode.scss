@@ -313,7 +313,7 @@ mark, .mark {
             left: 0; bottom: -30px;
             opacity: 0;
             visibility: hidden;
-            z-index: 999;
+            z-index: 9;
             @include transition(all .3s ease .3s);
             > div {
                 display: inline-block;
@@ -385,7 +385,7 @@ mark, .mark {
                     margin: auto;
                     top: 50%;
                     @include translateY(-50%);
-                    z-index: 9999;
+                    z-index: 9;
                     opacity: .5;
                     @include transition;
                     .fa {
@@ -407,7 +407,7 @@ mark, .mark {
                 position: absolute;
                 width: 100%;
                 left: 0; bottom: 10px;
-                z-index: 999;
+                z-index: 9;
                 .owl-page {
                     position: relative;
                     > span {

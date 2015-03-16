@@ -284,7 +284,7 @@
                 margin: auto;
                 top: 50%;
                 @include translateY(-50%);
-                z-index: 9999;
+                z-index: 9;
                 opacity: .8;
                 @include transition;
                 .fa {
@@ -305,7 +305,7 @@
             position: absolute;
             width: 100%;
             left: 0; bottom: 10px;
-            z-index: 999;
+            z-index: 9;
             .owl-page {
                 position: relative;
                 > span {
@@ -1365,6 +1365,7 @@ body.single-post {
                     position: absolute;
                     top: 0;
                     @include translateY(-50%);
+                    z-index: 999;
                     .name-author {
                         display: none;
                     }
