@@ -871,6 +871,9 @@ body.single-post {
         list-style: none;
         padding: 0;
     }
+    select {
+        width: 100%;
+    }
 }
 .widget_latest_post ul li,
 .widget_rss ul li,
@@ -900,6 +903,9 @@ body.single-post {
         margin-left: 10px;
         border-top: 1px solid #ededed;
     }
+}
+.widget_search form input {
+  width: 100%;
 }
 .widget_flickr {
     .flickr {

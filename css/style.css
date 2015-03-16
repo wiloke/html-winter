@@ -110,6 +110,16 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+select {
+  border: 1px solid #eee;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 10px;
+  color: #888888;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
 textarea {
   background: none;
   border: 0;
@@ -2341,6 +2351,9 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   list-style: none;
   padding: 0;
 }
+.widget select {
+  width: 100%;
+}
 
 .widget_latest_post ul li,
 .widget_rss ul li,
@@ -2402,6 +2415,10 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
 .widget_archive ul li ul {
   margin-left: 10px;
   border-top: 1px solid #ededed;
+}
+
+.widget_search form input {
+  width: 100%;
 }
 
 .widget_flickr .flickr {
