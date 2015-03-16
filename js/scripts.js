@@ -191,6 +191,8 @@
                     menuList
                         .addClass('off-canvas')
                         .css('height', windowHeight - 52);
+                    menuList
+                        .children('.menu-item-has-children').removeClass('item-plus');
                     if (menu.find('.submenu-toggle').length === 0) {
                         $('.menu-item-has-children, .navList > .menu-item-language-current')
                             .children('a')
@@ -253,6 +255,8 @@
                     menuList
                         .removeClass('off-canvas')
                         .css('height', 'auto');
+                    menuList
+                        .children('.menu-item-has-children').addClass('item-plus');
                     $('.back-mb, .submenu-toggle').remove();
                 }
             });

@@ -751,6 +751,21 @@ mark, .mark {
   padding: 0;
   margin-bottom: 0;
 }
+.navlist > li.menu-item-has-children.item-plus > a {
+  position: relative;
+}
+.navlist > li.menu-item-has-children.item-plus > a:after {
+  content: '+';
+  display: inline-block;
+  margin-left: 4px;
+}
+.navlist > li > .sub-menu {
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+}
 .navlist li {
   position: relative;
   display: inline-block;
@@ -779,11 +794,6 @@ mark, .mark {
   border: 1px solid #f3f3f3;
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translateY(10px);
-  -moz-transform: translateY(10px);
-  -ms-transform: translateY(10px);
-  -o-transform: translateY(10px);
-  transform: translateY(10px);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
