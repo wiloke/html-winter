@@ -988,7 +988,7 @@ mark, .mark {
   padding-bottom: 30px;
 }
 .navlist.off-canvas li.back-mb {
-  background-color: #eff1f1;
+  background-color: rgba(0, 0, 0, 0.02);
 }
 .navlist.off-canvas.off-canvas-active {
   -webkit-transform: translateX(0);
@@ -1005,6 +1005,8 @@ mark, .mark {
   text-align: center;
   cursor: pointer;
   background-color: #eff1f1;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-left: 1px solid #f2f2f2;
   color: #383838;
   -webkit-transform: translateY(-43px);
   -moz-transform: translateY(-43px);

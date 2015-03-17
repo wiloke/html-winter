@@ -422,7 +422,7 @@
 				}
 			}
 			&.back-mb {
-				background-color: #eff1f1;
+				background-color: rgba(0,0,0,.02);
 			}
 		}
 		&.off-canvas-active {
@@ -435,6 +435,8 @@
 			text-align: center;
 			cursor: pointer;
 			background-color: #eff1f1;
+			background-color: rgba(0,0,0,.02);
+			border-left: 1px solid #f2f2f2;
 			color: #383838;
 			@include translateY(-43px);
 			.fa {
