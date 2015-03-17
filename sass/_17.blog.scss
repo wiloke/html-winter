@@ -24,6 +24,9 @@
         .post-media {
             position: relative;
             overflow: hidden;
+            .image-wrap {
+                display: block;
+            }
             img {
                 width: 100%;
             }

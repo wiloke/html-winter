@@ -1553,6 +1553,9 @@ mark, .mark {
   position: relative;
   overflow: hidden;
 }
+.blog-content .post .post-media .image-wrap {
+  display: block;
+}
 .blog-content .post .post-media img {
   width: 100%;
 }
