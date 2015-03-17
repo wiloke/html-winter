@@ -1807,6 +1807,14 @@ mark, .mark {
   transform: translateY(0);
 }
 
+.ismobile .blog-content .post .post-cat {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
 .blog-heading {
   position: relative;
   padding: 30px 0;

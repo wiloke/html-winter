@@ -251,7 +251,15 @@
         }
     }
 }
-
+.ismobile {
+    .blog-content {
+        .post {
+            .post-cat {
+                @include translateY(0);
+            }
+        }
+    }
+}
 .blog-heading {
     position: relative;
     padding: 30px 0;
