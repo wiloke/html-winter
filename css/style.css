@@ -1708,8 +1708,18 @@ mark, .mark {
   color: #484848;
   text-transform: uppercase;
 }
+.blog-content .post .post-body .post-author .name-author cite {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 .blog-content .post .post-body .post-author .name-author:before {
   content: '// ';
+}
+.blog-content .post .post-body .post-author a:hover * {
+  color: #e15d5d;
 }
 .blog-content .post .post-body .post-title h1 {
   font-size: 18px;
@@ -2234,7 +2244,7 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
 .blog-timeline .post .post-body,
 .blog-list .post .post-body {
   overflow: hidden;
-  padding: 25px 97px 0 10px;
+  padding: 25px 25px 0 10px;
   margin-bottom: 10px;
 }
 .blog-timeline .post .post-meta,
@@ -2261,8 +2271,88 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   border: 1px solid #eee;
 }
 
+.blog-list .post .post-body {
+  padding: 30px 25px 0 15px;
+}
 .blog-list .post .post-body .post-entry {
   margin-top: 15px;
+}
+.blog-list .content .post .post-title h2 {
+  margin-bottom: 2px;
+}
+.blog-list .content .post .post-meta {
+  position: static;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  margin-left: -5px;
+  margin-top: 3px;
+}
+.blog-list .content .post .post-meta .post-format,
+.blog-list .content .post .post-meta .post-date,
+.blog-list .content .post .post-meta .post-comment {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-right: 1px solid #888;
+  padding: 0 5px;
+  margin-bottom: 0;
+}
+.blog-list .content .post .post-meta .post-format *,
+.blog-list .content .post .post-meta .post-date *,
+.blog-list .content .post .post-meta .post-comment * {
+  color: #777;
+  font-size: 11px;
+  line-height: 1em;
+}
+.blog-list .content .post .post-meta .post-author {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0 5px;
+  border-right: 1px solid #777;
+  line-height: 0.8em;
+}
+.blog-list .content .post .post-meta .post-author .image-thumb {
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+}
+.blog-list .content .post .post-meta .post-author .image-thumb img {
+  vertical-align: top;
+}
+.blog-list .content .post .post-meta .post-author .name-author {
+  color: #888;
+}
+.blog-list .content .post .post-meta .post-author .name-author:before {
+  display: none;
+}
+.blog-list .content .post .post-meta .post-date .year {
+  padding: 0;
+  display: inline-block;
+  border: 0;
+}
+.blog-list .content .post .post-meta .post-date .year:after {
+  content: '/';
+}
+.blog-list .content .post .post-meta .post-date .month, .blog-list .content .post .post-meta .post-date .day {
+  padding: 0;
+}
+.blog-list .content .post .post-meta .post-comment .fa, .blog-list .content .post .post-meta .post-comment a {
+  border: 0;
+  padding: 0;
+  display: inline-block;
+}
+.blog-list .content .post .post-meta .post-comment .fa {
+  margin-right: 3px;
+}
+.blog-list .content .post .post-meta > div:last-child {
+  border: 0;
+}
+.blog-list .content .post:hover .post-meta .post-format * {
+  color: #e15d5d;
 }
 
 .blog-timeline .post-wrapper {
@@ -3001,7 +3091,7 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
     top: -55px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .blog-standard .content .post .post-author {
     position: absolute;
     top: 0;
@@ -3026,6 +3116,7 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
     margin-left: -5px;
+    margin-top: 3px;
   }
   .blog-standard .content .post .post-meta .post-format,
   .blog-standard .content .post .post-meta .post-date,
@@ -3040,6 +3131,7 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   .blog-standard .content .post .post-meta .post-format *,
   .blog-standard .content .post .post-meta .post-date *,
   .blog-standard .content .post .post-meta .post-comment * {
+    color: #777;
     font-size: 11px;
     line-height: 1em;
   }
@@ -3065,6 +3157,9 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   .blog-standard .content .post .post-meta > div:last-child {
     border: 0;
   }
+  .blog-standard .content:hover .post-meta .post-format * {
+    color: #e15d5d;
+  }
 
   .widget_calendar #calendar_wrap {
     margin-top: 20px;
@@ -3074,6 +3169,11 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   .widget_calendar #wp-calendar:after,
   .widget_calendar #calendar_wrap:after {
     display: none;
+  }
+
+  .blog-content .content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -3089,6 +3189,20 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
 
   .blog-content .post .post-body .post-share {
     right: 15px;
+  }
+
+  .blog-list .post .post-body {
+    padding-top: 25px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .blog-list .post .post-media {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+  .blog-list .post .post-body {
+    overflow: visible;
   }
 }
 @media screen and (max-width: 640px) {

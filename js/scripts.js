@@ -153,15 +153,6 @@
                 .find('.col-md-3')
                     .addClass('col-md-pull-9');
 
-            if (window.innerWidth < 992) {
-                $('.blog-standard')
-                    .find('.content')
-                        .css({
-                            'margin-left': '0',
-                            'margin-right': '0'
-                        });
-                
-            }
             $('.blog-standard .post').each(function() {
                 var $this = $(this),
                     $postmeta = $this.find('.post-meta'),
@@ -172,6 +163,15 @@
                 } else {
                     $postmeta.insertAfter($postmedia);
                 }
+            });
+            $('.blog-list .post').each(function() {
+                var $this = $(this),
+                    $postmeta = $this.find('.post-meta'),
+                    $posttitle = $(this).find('.post-title'),
+                    $postauthor = $(this).find('.post-author'),
+                    $postmedia = $(this).find('.post-media');
+                $postauthor.insertAfter($postmeta.children().first());
+                $postmeta.insertAfter($posttitle);
             });
 
             /* Menu style */
