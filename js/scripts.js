@@ -44,7 +44,7 @@
     }
 
     function piPlaceholder() {
-        var $ph = $('input[type="search"], input[type="text"], input[type="url"], input[type="number"], input[type="email"], textarea');
+        var $ph = $('input[type="search"], input[type="text"], input[type="email"], textarea');
         $ph.each(function() {
             var value = $(this).val();
             $(this).focus(function() {
@@ -284,10 +284,6 @@
         });
         
 
-        if (isMobile.any() || window.innerWidth < 1200) {
-            $('.blog-content .post-entry').css('text-align', 'justify');
-        }
-
         $(window).load(function() {
             var paginationSlider = ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>'];
             if ($(".featured-slider").length > 0) {
@@ -297,7 +293,7 @@
                     navigation: true,
                     pagination: false,
                     items: 5,
-                    // itemsCustom: [[640, 1], [992, 3], [1000, 4], [1400, 5]],
+                    itemsCustom: [[0, 1], [500, 2], [992, 3], [1200, 4], [1400, 5]],
                     navigationText: paginationSlider
                 });
             }

@@ -1,36 +1,21 @@
-/*------------------------------------------------------------------------
-# Oniver
-# ------------------------------------------------------------------------
-# Designed by 
-# Websites:  http://www. -  Email: 
+/*
+# Designed by Wiloke - kyphuman
+# Website: wiloke.com
+# Contact: kyphuman@gmail.com
 --------------------------------------------------------------------------
 
-    1.   Shortcode
+    1.   Reset
     2.   Header
-    3.   Home
-    4.   Short About
-    5.   Our story
-    6.   The menu
-    7.   Highlight
-    8.   The staff
-    9.   Events
-    10.  Testimonial
-    11.  Section blog
-    12.  Contact
-    13.  Footer
-    14.  Fastfood
-    15.  Milestones
-    16.  About story
-    17.  Shop
-    18.  Product detail
-    19.  Reservation
-    20.  Cart
-    21.  Checkout
-    22.  Preloader
-    23.  Responsive
+    3.   Featured
+    4.   Preloader
+    5.   Main content
+    6.   Sidebar
+    7.   Contact
+    8.   Footer
+    9.   Responsive
+--------------------------------------------------------------------------#
 
---------------------------------------------------------------------------------*/
-/* 1.   Shortcode
+/* 1.   Reset
 --------------------------------------------------------------------------------*/
 a,
 input,
@@ -463,7 +448,8 @@ mark, .mark {
   visibility: visible;
 }
 
-.ismobile .owl-carousel .owl-controls .owl-buttons {
+.post-slider.owl-carousel .owl-controls .owl-buttons,
+.featured-slider.owl-carousel .owl-controls .owl-buttons {
   position: static;
   margin: 0;
   padding: 0;
@@ -471,7 +457,8 @@ mark, .mark {
   opacity: 1;
   visibility: visible;
 }
-.ismobile .owl-carousel .owl-controls .owl-buttons > div {
+.post-slider.owl-carousel .owl-controls .owl-buttons > div,
+.featured-slider.owl-carousel .owl-controls .owl-buttons > div {
   position: absolute;
   margin: auto;
   top: 50%;
@@ -488,19 +475,23 @@ mark, .mark {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.ismobile .owl-carousel .owl-controls .owl-buttons > div .fa {
+.post-slider.owl-carousel .owl-controls .owl-buttons > div .fa,
+.featured-slider.owl-carousel .owl-controls .owl-buttons > div .fa {
   border: 0;
   background-color: #fff;
   color: #333;
   font-size: 12px;
 }
-.ismobile .owl-carousel .owl-controls .owl-buttons > div.owl-prev {
+.post-slider.owl-carousel .owl-controls .owl-buttons > div.owl-prev,
+.featured-slider.owl-carousel .owl-controls .owl-buttons > div.owl-prev {
   left: 5px;
 }
-.ismobile .owl-carousel .owl-controls .owl-buttons > div.owl-next {
+.post-slider.owl-carousel .owl-controls .owl-buttons > div.owl-next,
+.featured-slider.owl-carousel .owl-controls .owl-buttons > div.owl-next {
   right: 5px;
 }
-.ismobile .owl-carousel .owl-controls .owl-pagination {
+.post-slider.owl-carousel .owl-controls .owl-pagination,
+.featured-slider.owl-carousel .owl-controls .owl-pagination {
   margin-top: 0;
   position: absolute;
   width: 100%;
@@ -508,22 +499,26 @@ mark, .mark {
   bottom: 10px;
   z-index: 9;
 }
-.ismobile .owl-carousel .owl-controls .owl-pagination .owl-page {
+.post-slider.owl-carousel .owl-controls .owl-pagination .owl-page,
+.featured-slider.owl-carousel .owl-controls .owl-pagination .owl-page {
   position: relative;
 }
-.ismobile .owl-carousel .owl-controls .owl-pagination .owl-page > span {
+.post-slider.owl-carousel .owl-controls .owl-pagination .owl-page > span,
+.featured-slider.owl-carousel .owl-controls .owl-pagination .owl-page > span {
   border: 0;
   background-color: #fff;
 }
-.ismobile .owl-carousel .owl-controls .owl-pagination .owl-page.active > span {
+.post-slider.owl-carousel .owl-controls .owl-pagination .owl-page.active > span,
+.featured-slider.owl-carousel .owl-controls .owl-pagination .owl-page.active > span {
   border-color: #e15d5d;
   background-color: #e15d5d;
 }
-.ismobile .owl-carousel:hover .owl-controls .owl-buttons > div {
+.post-slider.owl-carousel:hover .owl-controls .owl-buttons > div,
+.featured-slider.owl-carousel:hover .owl-controls .owl-buttons > div {
   opacity: 1;
 }
 
-/* 2.   Header
+/* 4.   Preloader
 --------------------------------------------------------------------------------*/
 #preloader {
   position: fixed;
@@ -1075,7 +1070,7 @@ mark, .mark {
   display: none;
 }
 
-/* 3.   Hero
+/* 3.   Featured
 --------------------------------------------------------------------------------*/
 .featured-slider .post {
   position: relative;
@@ -1115,7 +1110,7 @@ mark, .mark {
   -ms-transform: translateY(-30%);
   -o-transform: translateY(-30%);
   transform: translateY(-30%);
-  padding: 15px 34px;
+  padding: 15px 60px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -1171,6 +1166,20 @@ mark, .mark {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   opacity: 1;
+}
+.featured-slider.owl-carousel .owl-controls .owl-buttons > div .fa {
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+}
+.featured-slider.owl-carousel .owl-controls .owl-buttons > div .fa:hover {
+  color: #e15d5d;
+}
+.featured-slider.owl-carousel .owl-controls .owl-buttons > div.owl-prev {
+  left: 0;
+}
+.featured-slider.owl-carousel .owl-controls .owl-buttons > div.owl-next {
+  right: 0;
 }
 
 .ismobile .featured-slider .post .post-media:after {
@@ -1525,7 +1534,7 @@ mark, .mark {
     width: 100%;
   }
 }
-/* 17.   Blog
+/* 5.   Main content
 --------------------------------------------------------------------------------*/
 .blog-content {
   background-color: #f7f9f9;
@@ -2019,7 +2028,24 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
 .related-post .related-post-item .post-date {
   font-size: 12px;
 }
-
+.signature {
+  padding: 30px 20px 40px 20px;
+}
+.signature .inner {
+  display: inline-block;
+  text-align: center;
+}
+.signature img {
+  width: 135px;
+}
+.signature .name {
+  display: block;
+  margin-top: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #555;
+}
 .about-author {
   position: relative;
   margin-bottom: 10px;
@@ -2466,6 +2492,8 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   margin-bottom: 60px;
 }
 
+/* 6.   Sidebar
+--------------------------------------------------------------------------------*/
 .sidebar {
   margin-top: 80px;
   max-width: 480px;
@@ -2879,7 +2907,8 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
 .widget_newsletter .form-actions input:hover {
   color: #e15d5d;
 }
-
+/* 7.   Contact
+--------------------------------------------------------------------------------*/
 .contact-info {
   position: relative;
   overflow: hidden;
@@ -3012,7 +3041,8 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   border-color: #e15d5d;
   color: #e15d5d;
 }
-
+/* 8.   Footer
+--------------------------------------------------------------------------------*/
 #footer {
   background-color: #fff;
   padding-top: 40px;
@@ -3088,7 +3118,8 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
 .copyright p {
   margin: 0;
 }
-
+/* 9.   Responsive
+--------------------------------------------------------------------------------*/
 @media screen and (max-width: 1199px) {
   .widget_calendar #calendar_wrap:after {
     top: -55px;
@@ -3178,6 +3209,9 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+  .contact-page .post-meta {
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
   .blog-content .post .post-body {
@@ -3206,6 +3240,35 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   }
   .blog-list .post .post-body {
     overflow: visible;
+  }
+  .blog-timeline .post-wrapper:before,
+  .blog-timeline .post-wrapper .pi-line {
+    display: none;
+  }
+  .blog-timeline .post {
+    margin-bottom: 20px;
+  }
+  .blog-content.blog-timeline .post .post-body {
+    margin-bottom: 30px !important;
+  }
+  .blog-timeline .grid-inner {
+    width: 100%;
+  }
+  .blog-timeline .grid-item:nth-of-type(even) .grid-inner,
+  .blog-timeline .grid-item:nth-of-type(odd) .grid-inner {
+    float: none;
+    padding: 0;
+  }
+  .blog-timeline .grid-item:nth-of-type(even) .grid-inner .post-meta,
+  .blog-timeline .grid-item:nth-of-type(odd) .grid-inner .post-meta {
+    display: none;
+  }
+  .page-loadmore {
+    margin-bottom: 30px;
+    padding: 0 !important;
+  }
+  .blog-timeline .post-wrapper {
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 640px) {
@@ -3236,32 +3299,4 @@ body.single-post .blog-content .post .post-body .post-share .share-toggle {
   .header .logo img {
     max-height: 90px;
   }
-}
-/* 18.   404
---------------------------------------------------------------------------------*/
-.page-404 {
-  padding: 0;
-}
-.page-404 .page-content .tb {
-  padding: 38px;
-}
-.page-404 .page-content h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 150px;
-  color: #000;
-  margin: 0;
-}
-.page-404 .page-content h2 span {
-  color: #e15d5d;
-}
-.page-404 .page-content h4 {
-  font-size: 18px;
-  margin-top: 0;
-}
-.page-404 .page-content .widget_search {
-  margin-top: 25px;
-}
-.page-404 .page-content .go-home {
-  margin-top: 25px;
 }
